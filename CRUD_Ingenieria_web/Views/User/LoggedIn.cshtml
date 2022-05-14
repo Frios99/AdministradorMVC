@@ -1,0 +1,13 @@
+﻿@using Microsoft.AspNetCore.Http;
+@using Microsoft.AspNetCore.Mvc;
+@{
+    ViewData["Title"] = "LoggedIn";
+}
+@if (@Context.Session.GetString("Id") != null) 
+
+{
+    <h4>Hello @Context.Session.GetString("Username").ToString()</h4>
+}
+
+<h1>LoggedIn</h1>
+
